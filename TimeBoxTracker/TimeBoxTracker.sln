@@ -1,0 +1,21 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+# SharpDevelop 5.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeBoxTracker", "TimeBoxTracker\TimeBoxTracker.csproj", "{58D1490B-DEA1-41F2-A40D-B4EBBC77D86D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{58D1490B-DEA1-41F2-A40D-B4EBBC77D86D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58D1490B-DEA1-41F2-A40D-B4EBBC77D86D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58D1490B-DEA1-41F2-A40D-B4EBBC77D86D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58D1490B-DEA1-41F2-A40D-B4EBBC77D86D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
