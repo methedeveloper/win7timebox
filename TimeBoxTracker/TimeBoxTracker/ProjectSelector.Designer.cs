@@ -45,17 +45,18 @@ namespace TimeBoxTracker
 			// lblSelection
 			// 
 			this.lblSelection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-			this.lblSelection.Location = new System.Drawing.Point(31, 0);
+			this.lblSelection.Location = new System.Drawing.Point(32, 0);
 			this.lblSelection.Name = "lblSelection";
-			this.lblSelection.Size = new System.Drawing.Size(119, 24);
+			this.lblSelection.Size = new System.Drawing.Size(118, 24);
 			this.lblSelection.TabIndex = 0;
 			this.lblSelection.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// btnChangeSelection
 			// 
+			this.btnChangeSelection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnChangeSelection.Location = new System.Drawing.Point(0, 0);
 			this.btnChangeSelection.Name = "btnChangeSelection";
-			this.btnChangeSelection.Size = new System.Drawing.Size(25, 23);
+			this.btnChangeSelection.Size = new System.Drawing.Size(26, 23);
 			this.btnChangeSelection.TabIndex = 1;
 			this.btnChangeSelection.Text = "...";
 			this.btnChangeSelection.UseVisualStyleBackColor = true;

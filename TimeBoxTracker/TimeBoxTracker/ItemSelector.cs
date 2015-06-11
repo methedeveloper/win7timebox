@@ -17,7 +17,7 @@ namespace TimeBoxTracker
 	/// <summary>
 	/// Description of ItemSelector.
 	/// </summary>
-	public abstract class ItemSelector<T>: UserControl where T: class
+	public class ItemSelector<T>: UserControl where T: class
 	{
 		private Form currentSelectionDialog;
 		
@@ -65,13 +65,25 @@ namespace TimeBoxTracker
 			}
 		}
 		
-		protected abstract void UpdateItem(T item);
+		protected virtual void UpdateItem(T item)
+		{
+			
+		}
 		
-		protected abstract void InsertItem(T item);
+		protected virtual void InsertItem(T item)
+		{
+			
+		}
 		
-		protected abstract void DeleteItem(T item);
+		protected virtual void DeleteItem(T item)
+		{
+			
+		}
 		
-		protected abstract void SetNewSelectedItem(T item);
+		protected virtual void SetNewSelectedItem(T item)
+		{
+			
+		}
 
 		void selector_ItemOperation(object sender, FilteredEditableListBox.ItemOperationEventArgs e)
 		{

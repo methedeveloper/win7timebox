@@ -154,11 +154,13 @@ namespace TimeBoxTracker
 			// 
 			this.txtStartTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
 			| System.Windows.Forms.AnchorStyles.Right)));
+			this.txtStartTime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.txtStartTime.Location = new System.Drawing.Point(96, 63);
 			this.txtStartTime.Mask = "00:00";
 			this.txtStartTime.Name = "txtStartTime";
 			this.txtStartTime.Size = new System.Drawing.Size(156, 20);
 			this.txtStartTime.TabIndex = 4;
+			this.txtStartTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			this.txtStartTime.ValidatingType = typeof(System.DateTime);
 			// 
 			// label4
@@ -175,11 +177,13 @@ namespace TimeBoxTracker
 			// 
 			this.txtEndTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
 			| System.Windows.Forms.AnchorStyles.Right)));
+			this.txtEndTime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.txtEndTime.Location = new System.Drawing.Point(96, 89);
 			this.txtEndTime.Mask = "00:00";
 			this.txtEndTime.Name = "txtEndTime";
 			this.txtEndTime.Size = new System.Drawing.Size(156, 20);
 			this.txtEndTime.TabIndex = 5;
+			this.txtEndTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			this.txtEndTime.ValidatingType = typeof(System.DateTime);
 			// 
 			// btnSave
