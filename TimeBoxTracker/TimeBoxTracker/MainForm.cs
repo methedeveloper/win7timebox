@@ -151,16 +151,16 @@ namespace TimeBoxTracker
 		{
 			txtRemainingTime.ReadOnly = false;
 			txtElapsedTime.ReadOnly = false;
-			projectSelector.Enabled = true;
-			taskSelector.Enabled = true;
+			projectSelector.ReadOnly = false;
+			taskSelector.ReadOnly = false;
 		}
 		
 		void DisableTimeBoxEdition()
 		{
 			txtRemainingTime.ReadOnly = true;
 			txtElapsedTime.ReadOnly = true;
-			projectSelector.Enabled = false;
-			taskSelector.Enabled = false;
+			projectSelector.ReadOnly = true;
+			taskSelector.ReadOnly = true;
 		}
 		
 		void TaskTimer_Tick(object sender, TaskTimerTickEventArgs e)

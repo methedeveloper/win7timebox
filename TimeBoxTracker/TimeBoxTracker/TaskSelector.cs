@@ -26,14 +26,22 @@ namespace TimeBoxTracker
 			// The InitializeComponent() call is required for Windows Forms designer support.
 			//
 			InitializeComponent();
-			
-			btnChangeSelection.Enabled = Enabled;
-			EnabledChanged += TaskSelector_EnabledChanged;
 		}
-
-		void TaskSelector_EnabledChanged(object sender, EventArgs e)
+		
+		private bool readOnly = false;
+		
+		public bool ReadOnly
 		{
-			btnChangeSelection.Enabled = Enabled;
+			get
+			{
+				return readOnly;
+			}
+			set
+			{
+				readOnly = value;
+				btnChangeSelection.Visible = !readOnly;
+				lblSelection.Dock = readOnly ? DockStyle.Fill : DockStyle.None;
+			}
 		}
 		
 		private Task task;
