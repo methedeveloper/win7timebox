@@ -40,7 +40,16 @@ namespace TimeBoxTracker
 			{
 				readOnly = value;
 				btnChangeSelection.Visible = !readOnly;
-				lblSelection.Dock = readOnly ? DockStyle.Fill : DockStyle.None;
+				if (readOnly)
+				{
+					lblSelection.Location = new Point(0,0);
+					lblSelection.Size = new Size(Size.Width, Size.Height);
+				}
+				else
+				{
+					lblSelection.Location = new Point(32,0);
+					lblSelection.Size = new Size(Size.Width-32, Size.Height);					
+				}
 			}
 		}
 		

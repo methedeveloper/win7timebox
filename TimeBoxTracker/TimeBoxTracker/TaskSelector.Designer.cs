@@ -44,7 +44,8 @@ namespace TimeBoxTracker
 			// 
 			// lblSelection
 			// 
-			this.lblSelection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+			this.lblSelection.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+			| System.Windows.Forms.AnchorStyles.Right)));
 			this.lblSelection.Location = new System.Drawing.Point(32, 0);
 			this.lblSelection.Name = "lblSelection";
 			this.lblSelection.Size = new System.Drawing.Size(118, 24);

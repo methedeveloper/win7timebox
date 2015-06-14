@@ -170,7 +170,7 @@ namespace TimeBoxTracker
 		
 		void BtnStartClick(object sender, EventArgs e)
 		{
-			if (!TaskTimer.IsRunning)
+			if (TaskTimer.State == TaskTimerState.Stopped)
 			{
 				TaskTimer.RemainingTime = StringToTimeSpan(txtRemainingTime.Text, TaskTimer.RemainingTime);
 				TaskTimer.ElapsedTime = StringToTimeSpan(txtElapsedTime.Text, TaskTimer.ElapsedTime);
@@ -185,7 +185,7 @@ namespace TimeBoxTracker
 
 		void BtnPauseClick(object sender, EventArgs e)
 		{
-			if (TaskTimer.IsRunning)
+			if (TaskTimer.State == TaskTimerState.Started)
 			{
 				TaskTimer.Pause();
 			}
