@@ -24,7 +24,7 @@ namespace TimeBoxTracker
 	{
 		private TaskTimer TaskTimer { get; set; }
 		
-		private TimeBox Timebox { get; set; }
+		private TimeBox TimeBox { get; set; }
 		
 		public MainForm()
 		{
@@ -107,7 +107,7 @@ namespace TimeBoxTracker
 					btnPauseResume.Text = "Pause";
 					DisableTimeBoxEdition();
 				}));
-			Timebox.TaskId = taskSelector.Task.Id;
+			TimeBox.TaskId = taskSelector.Task.Id;
 		}
 		
 		void TaskTimer_Stopped(object sender, EventArgs e)
@@ -121,15 +121,15 @@ namespace TimeBoxTracker
 					Reset();
 				}));
 			SaveCurrentTimebox();
-			Timebox = null;
+			TimeBox = null;
 		}
 		
 		void SaveCurrentTimebox()
 		{
-			Timebox.EndTime = DateTime.Now;
-			Timebox.StartTime = Timebox.EndTime.Subtract(TaskTimer.ElapsedTime);
-			Timebox.Pauses = TaskTimer.Pauses;
-			TimeboxLogic.Insert(Timebox);		
+			TimeBox.EndTime = DateTime.Now;
+			TimeBox.StartTime = TimeBox.EndTime.Subtract(TaskTimer.ElapsedTime);
+			TimeBox.Pauses = TaskTimer.Pauses;
+			TimeBoxLogic.Insert(TimeBox);		
 		}
 		
 		void TaskTimer_Started(object sender, EventArgs e)
@@ -144,7 +144,7 @@ namespace TimeBoxTracker
 			TimeBox newTimeBox = new TimeBox();
 			newTimeBox.TaskId = taskSelector.Task.Id;
 			newTimeBox.StartTime = DateTime.Now;
-			Timebox = newTimeBox;
+			TimeBox = newTimeBox;
 		}
 		
 		void EnableTimeBoxEdition()
@@ -212,12 +212,12 @@ namespace TimeBoxTracker
 		void TaskSelectorSelectionChanged(object sender, EventArgs e)
 		{
 			btnStartStop.Enabled = taskSelector.Task != null;
-			btnPauseResume.Enabled = Timebox != null && taskSelector.Task != null;
+			btnPauseResume.Enabled = TimeBox != null && taskSelector.Task != null;
 		}
 		
 		void MainFormFormClosing(object sender, FormClosingEventArgs e)
 		{	
-			if (Timebox != null)
+			if (TimeBox != null)
 			{
 				e.Cancel = (MessageBox.Show("Are you sure you want to stop the current timebox?", "TimeboxTracker", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No);
 			}
@@ -225,7 +225,7 @@ namespace TimeBoxTracker
 		
 		void MainFormFormClosed(object sender, FormClosedEventArgs e)
 		{
-			if (Timebox != null)
+			if (TimeBox != null)
 			{
 				SaveCurrentTimebox();
 			}

@@ -36,10 +36,6 @@ namespace TimeBoxTracker.BusinessRules
 		
 		public static void Delete(Project project)
 		{
-			foreach (Task task in TaskLogic.GetByProjectId(project.Id))
-			{
-				TaskLogic.Delete(task);
-			}
 			string deleteSQL = String.Format("delete from project where id={0}", project.Id);
 			DataAccessLayer.ExecuteNonQuery(deleteSQL);
 			project.EntityState = EntityState.Deleted;

@@ -36,7 +36,6 @@ namespace TimeBoxTracker.BusinessRules
 		
 		public static void Delete(Task task)
 		{
-			TimeboxLogic.DeleteByTaskId(task.Id);
 			string deleteSQL = String.Format("delete from task where id={0}", task.Id);
 			DataAccessLayer.ExecuteNonQuery(deleteSQL);
 			task.EntityState = EntityState.Deleted;

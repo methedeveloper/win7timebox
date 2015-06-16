@@ -16,7 +16,7 @@ namespace TimeBoxTracker.BusinessRules
 	/// <summary>
 	/// Description of TimeBoxLogic.
 	/// </summary>
-	public static class TimeboxLogic
+	public static class TimeBoxLogic
 	{
 		public static void Insert(TimeBox timeBox)
 		{
@@ -37,12 +37,6 @@ namespace TimeBoxTracker.BusinessRules
 					timeBox.EntityState = EntityState.UpToDate;
 				}
 			}
-		}
-		
-		public static void DeleteByTaskId(int taskId)
-		{
-			string deleteSQL = String.Format("delete from timebox where id_task={0}", taskId);
-			DataAccessLayer.ExecuteNonQuery(deleteSQL);
 		}
 		
 		public static void Delete(TimeBox timeBox)

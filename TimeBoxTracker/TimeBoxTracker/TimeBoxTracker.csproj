@@ -136,6 +136,7 @@
   <ItemGroup>
     <None Include="analog-clock-148148_640.ico" />
     <None Include="app.config" />
+    <None Include="CreateDatabase.sql" />
     <None Include="TimeBoxTracker.db">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
