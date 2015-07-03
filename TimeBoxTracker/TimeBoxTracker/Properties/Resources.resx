@@ -1294,4 +1294,10 @@
         gAA=
 </value>
   </data>
+  <data name="PROJECT_SELECTOR_TITLE" xml:space="preserve">
+    <value>Project Selector</value>
+  </data>
+  <data name="TASK_SELECTOR_TITLE" xml:space="preserve">
+    <value>Task Selector</value>
+  </data>
 </root>

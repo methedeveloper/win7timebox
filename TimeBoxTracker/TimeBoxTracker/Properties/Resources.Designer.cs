@@ -69,5 +69,23 @@ namespace TimeBoxTracker.Properties {
 				return ((System.Drawing.Icon)(obj));
 			}
 		}
+		
+		/// <summary>
+		///   Looks up a localized string similar to Project Selector.
+		/// </summary>
+		internal static string PROJECT_SELECTOR_TITLE {
+			get {
+				return ResourceManager.GetString("PROJECT_SELECTOR_TITLE", resourceCulture);
+			}
+		}
+		
+		/// <summary>
+		///   Looks up a localized string similar to Task Selector.
+		/// </summary>
+		internal static string TASK_SELECTOR_TITLE {
+			get {
+				return ResourceManager.GetString("TASK_SELECTOR_TITLE", resourceCulture);
+			}
+		}
 	}
 }

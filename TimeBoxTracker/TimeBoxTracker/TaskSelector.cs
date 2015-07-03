@@ -7,6 +7,8 @@
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 using System;
+using System.Linq;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using TimeBoxTracker.Entities;
@@ -105,7 +107,11 @@ namespace TimeBoxTracker
 		{
 			if (Project != null)
 			{
-				ShowDialog(Task, TaskLogic.GetByProjectId(Project.Id));
+				IList<Task> tasks = TaskLogic.GetByProjectId(Project.Id);
+				ShowDialog(
+					Task,
+					tasks,
+					Properties.Resources.TASK_SELECTOR_TITLE);
 			}
 		}
 		

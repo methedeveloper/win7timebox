@@ -7,6 +7,8 @@
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 using System;
+using System.Linq;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
@@ -81,7 +83,11 @@ namespace TimeBoxTracker
 		
 		void BtnChangeSelectionClick(object sender, EventArgs e)
 		{
-			ShowDialog(Project, ProjectLogic.GetAll());
+			IList<Project> projects = ProjectLogic.GetAll();
+			ShowDialog(
+				Project,
+				projects, 
+				Properties.Resources.PROJECT_SELECTOR_TITLE);
 		}
 		
 		protected override void DeleteItem(Project item)

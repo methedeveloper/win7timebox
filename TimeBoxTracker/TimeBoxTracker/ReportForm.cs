@@ -210,5 +210,10 @@ namespace TimeBoxTracker
 				btnSave.Enabled = false;
 			}
 		}
+		
+		void ProjectSelectorFilterSelectionChanged(object sender, EventArgs e)
+		{
+			taskSelectorFilter.Project = projectSelectorFilter.Project;
+		}
 	}
 }

@@ -21,10 +21,11 @@ namespace TimeBoxTracker
 	{
 		private Form currentSelectionDialog;
 		
-		protected void ShowDialog(T selectedItem, IList<T> itemList)
+		protected void ShowDialog(T selectedItem, IList<T> itemList, string dialogTitle)
 		{
 			using (currentSelectionDialog = new Form())
 			{
+				currentSelectionDialog.Text = dialogTitle;
 				currentSelectionDialog.Icon = Properties.Resources.analog_clock_148148_640;
 				FilteredEditableListBox selector = new FilteredEditableListBox();
 				selector.Dock = DockStyle.Fill;

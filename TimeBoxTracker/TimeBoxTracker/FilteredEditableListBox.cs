@@ -43,7 +43,15 @@ namespace TimeBoxTracker
 			set
 			{
 				txtItem.Text = value != null ? GetSelectedItemValue(value) : String.Empty;
+				lstItems.SelectedItem = value;
+				SetUpOperationButton();
 			}
+		}
+		
+		private void SetUpOperationButton()
+		{
+			btnOperation.Enabled = !String.IsNullOrEmpty(txtItem.Text);
+			btnOperation.Text = GetSelectedItemValue(lstItems.SelectedItem) == txtItem.Text ? "Delete" : "Add";
 		}
 
 		private void lstItems_DoubleClick(object sender, System.EventArgs e)
@@ -208,7 +216,10 @@ namespace TimeBoxTracker
 			}
 			lstItems.DisplayMember = DisplayMember;
 			if (GetSelectedItemValue(lstItems.SelectedItem) != txtItem.Text)
+			{
 				lstItems.SelectedItem = null;
+			}
+			SetUpOperationButton();
 		}
 		
 		void TxtItemKeyUp(object sender, KeyEventArgs e)
@@ -225,8 +236,7 @@ namespace TimeBoxTracker
 		
 		void TxtItemTextChanged(object sender, EventArgs e)
 		{
-			btnOperation.Enabled = !String.IsNullOrEmpty(txtItem.Text);
-			btnOperation.Text = GetSelectedItemValue(lstItems.SelectedItem) == txtItem.Text ? "Delete" : "Add";
+			SetUpOperationButton();
 		}
 
 		public class ItemOperationEventArgs: EventArgs

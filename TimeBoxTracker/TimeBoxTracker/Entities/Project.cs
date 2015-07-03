@@ -50,5 +50,22 @@ namespace TimeBoxTracker.Entities
 				}
 			}
 		}
+		
+		#region Equals and GetHashCode implementation
+		
+		public override bool Equals(object obj)
+		{
+			Project other = obj as Project;
+				if (other == null)
+					return false;
+						return this.id == other.id;
+		}
+
+		public override int GetHashCode()
+		{
+			return id.GetHashCode();
+		}
+
+		#endregion
 	}
 }
